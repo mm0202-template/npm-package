@@ -1,8 +1,8 @@
-import Sample from "./Sample";
+import Sample from './Sample'
 
-describe("サンプル", () => {
-    test('サンプルテスト', () => {
-        const sample = new Sample();
-        expect(sample.get()).toBe('success!!')
-    });
-});
+describe('サンプル', () => {
+  test('サンプルテスト', () => {
+    const sample = new Sample()
+    expect(sample.get()).toBe('success!!')
+  })
+})

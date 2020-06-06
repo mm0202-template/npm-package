@@ -1,5 +1,5 @@
 export default class Sample {
-    get(){
-        return 'success!!'
-    }
+  get(): string {
+    return 'success!!'
+  }
 }
