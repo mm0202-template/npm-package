@@ -4,16 +4,32 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest --forceExit --detectOpenHandles --maxWorkers=1",
+    "test:coverage": "jest --coverage",
     "build": "rimraf dist && tsc",
-    "prepublishOnly": "yarn run build"
+    "prepublishOnly": "yarn build",
+    "lint": "eslint ./**/*.{js,ts,jsx,tsx}",
+    "lint:fix": "eslint ./**/*.{js,ts,jsx,tsx} --fix"
   },
   "files": [
     "dist"
   ],
+  "husky": {
+    "hooks": {
+      "pre-push": "yarn lint"
+    }
+  },
   "devDependencies": {
     "@types/jest": "^25.2.1",
     "jest": "^25.3.0",
     "ts-jest": "^25.4.0",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "@types/node": "^12.12.21",
+    "@typescript-eslint/eslint-plugin": "^3.0.2",
+    "@typescript-eslint/parser": "^3.0.2",
+    "eslint": "^7.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "husky": "^4.2.5",
+    "prettier": "^2.0.5"
   }
 }
