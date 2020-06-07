@@ -2,7 +2,7 @@
  
 # setup
 ## tune package.json
-`npm init` & paste from template
+`npm init` & merge to template
 
 ## secrets for CI
 - NPM_TOKEN
