@@ -1,1 +1,1 @@
-export { default as Sample } from './Sample/Sample'
+export { default as Sample } from '~/Sample/Sample'
