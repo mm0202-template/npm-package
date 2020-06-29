@@ -3,12 +3,17 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "test": "jest --forceExit --detectOpenHandles --maxWorkers=1",
-    "test:coverage": "jest --coverage",
     "build": "rimraf dist && tsc",
-    "prepublishOnly": "yarn build",
+    "test": "jest --forceExit --detectOpenHandles --maxWorkers=1 --passWithNoTests",
+    "test:coverage": "jest --coverage --passWithNoTests",
     "lint": "eslint ./**/*.{js,ts,jsx,tsx}",
-    "lint:fix": "eslint ./**/*.{js,ts,jsx,tsx} --fix"
+    "lint:fix": "eslint ./**/*.{js,ts,jsx,tsx} --fix",
+    "version:prerelease": "yarn version --prerelease",
+    "version:patch": "yarn version --patch",
+    "version:minor": "yarn version --minor",
+    "version:major": "yarn version --major",
+    "preversion": "yarn lint && yarn test",
+    "prepublishOnly": "yarn build"
   },
   "files": [
     "dist"
