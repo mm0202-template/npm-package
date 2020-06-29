@@ -16,13 +16,13 @@
     "lib": ["ES2015","ES7"],
     "types": [
       "jest"
-    ],
-    "baseUrl": "./",
-    "paths": {
-      "~/*": [
-        "./src/*"
-      ]
-    }
+    ]
+//    "baseUrl": "./",
+    //    "paths": {
+    //      "~/*": [
+    //        "./src/*"
+    //      ]
+    //    }
   },
   "exclude": [
     "jest.config.js",
